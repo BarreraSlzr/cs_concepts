@@ -1,21 +1,21 @@
-class LinkedListNode {
-    value: number;
-    next: LinkedListNode | null;
+class LinkedListNode<T> {
+    value: T;
+    next: LinkedListNode<T> | null;
 
-    constructor(value: number, next: LinkedListNode | null = null) {
+    constructor(value: T, next: LinkedListNode<T> | null = null) {
         this.value = value;
         this.next = next;
     }
 }
 
-class LinkedList {
-    head: LinkedListNode | null;
+class LinkedList<T> {
+    head: LinkedListNode<T> | null;
 
     constructor() {
         this.head = null;
     }
 
-    append(value: number) {
+    append(value: T) {
         if (!this.head) {
             this.head = new LinkedListNode(value);
             return;
@@ -31,7 +31,7 @@ class LinkedList {
 }
 
 // Example usage:
-const linkedList = new LinkedList();
+const linkedList = new LinkedList<number>();
 linkedList.append(1);
 linkedList.append(2);
 linkedList.append(3);
