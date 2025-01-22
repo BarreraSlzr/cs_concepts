@@ -1,4 +1,4 @@
-class TrieNode<T> {
+export class TrieNode<T> {
     children: Map<T, TrieNode<T>>;
     isEndOfWord: boolean;
 
@@ -8,7 +8,7 @@ class TrieNode<T> {
     }
 }
 
-class Trie<T> {
+export class Trie<T> {
     root: TrieNode<T>;
 
     constructor() {

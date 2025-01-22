@@ -1,4 +1,4 @@
-class LinkedListNode<T> {
+export class LinkedListNode<T> {
     value: T;
     next: LinkedListNode<T> | null;
 
@@ -8,7 +8,7 @@ class LinkedListNode<T> {
     }
 }
 
-class LinkedList<T> {
+export class LinkedList<T> {
     head: LinkedListNode<T> | null;
 
     constructor() {
