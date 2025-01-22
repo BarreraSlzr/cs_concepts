@@ -1,10 +1,18 @@
 import { TreeNode } from '../tree';
 
-function mergeTwoBinaryTrees<T extends number>(t1: TreeNode<T> | null, t2: TreeNode<T> | null): TreeNode<T> | null {
+function mergeTwoBinaryTrees<T>(t1: TreeNode<T> | null, t2: TreeNode<T> | null): TreeNode<T> | null {
+    if (!(t1 instanceof TreeNode) || !(t2 instanceof TreeNode)) {
+        throw new Error('Invalid input: Both t1 and t2 must be instances of TreeNode');
+    }
+
+    if (typeof t1.value !== typeof t2.value) {
+        return null;
+    }
+
     if (!t1) return t2;
     if (!t2) return t1;
 
-    const merged = new TreeNode<T>(t1.value + t2.value);
+    const merged = new TreeNode<T>((t1.value as any) + (t2.value as any));
     merged.left = mergeTwoBinaryTrees(t1.left, t2.left);
     merged.right = mergeTwoBinaryTrees(t1.right, t2.right);
 
