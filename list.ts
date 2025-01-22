@@ -1,14 +1,14 @@
-class ListNode {
-    value: number;
-    next: ListNode | null;
+class ListNode<T> {
+    value: T;
+    next: ListNode<T> | null;
 
-    constructor(value: number, next: ListNode | null = null) {
+    constructor(value: T, next: ListNode<T> | null = null) {
         this.value = value;
         this.next = next;
     }
 }
 
 // Example usage:
-const head = new ListNode(1);
-head.next = new ListNode(2);
-head.next.next = new ListNode(3);
+const head = new ListNode<number>(1);
+head.next = new ListNode<number>(2);
+head.next.next = new ListNode<number>(3);

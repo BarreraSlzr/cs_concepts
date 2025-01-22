@@ -1,6 +1,5 @@
-
-class TrieNode {
-    children: Map<string, TrieNode>;
+class TrieNode<T> {
+    children: Map<T, TrieNode<T>>;
     isEndOfWord: boolean;
 
     constructor() {
@@ -9,14 +8,14 @@ class TrieNode {
     }
 }
 
-class Trie {
-    root: TrieNode;
+class Trie<T> {
+    root: TrieNode<T>;
 
     constructor() {
         this.root = new TrieNode();
     }
 
-    insert(word: string) {
+    insert(word: T[]) {
         let current = this.root;
         for (const char of word) {
             if (!current.children.has(char)) {
@@ -27,7 +26,7 @@ class Trie {
         current.isEndOfWord = true;
     }
 
-    search(word: string): boolean {
+    search(word: T[]): boolean {
         let current = this.root;
         for (const char of word) {
             if (!current.children.has(char)) {
@@ -38,7 +37,7 @@ class Trie {
         return current.isEndOfWord;
     }
 
-    startsWith(prefix: string): boolean {
+    startsWith(prefix: T[]): boolean {
         let current = this.root;
         for (const char of prefix) {
             if (!current.children.has(char)) {
@@ -51,8 +50,8 @@ class Trie {
 }
 
 // Example usage:
-const trie = new Trie();
-trie.insert("apple");
-console.log(trie.search("apple")); // true
-console.log(trie.search("app")); // false
-console.log(trie.startsWith("app")); // true
+const trie = new Trie<string>();
+trie.insert("apple".split(''));
+console.log(trie.search("apple".split(''))); // true
+console.log(trie.search("app".split(''))); // false
+console.log(trie.startsWith("app".split(''))); // true
