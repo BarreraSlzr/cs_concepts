@@ -1,10 +1,10 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
-function mergeTwoBinaryTrees<T>(t1: TreeNode<T> | null, t2: TreeNode<T> | null): TreeNode<T> | null {
+function mergeTwoBinaryTrees<T extends number>(t1: TreeNode<T> | null, t2: TreeNode<T> | null): TreeNode<T> | null {
     if (!t1) return t2;
     if (!t2) return t1;
 
-    const merged = new TreeNode(t1.value + t2.value);
+    const merged = new TreeNode<T>(t1.value + t2.value);
     merged.left = mergeTwoBinaryTrees(t1.left, t2.left);
     merged.right = mergeTwoBinaryTrees(t1.right, t2.right);
 

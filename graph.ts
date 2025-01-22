@@ -1,4 +1,4 @@
-class Graph<T> {
+export class Graph<T> {
     adjacencyList: Map<T, T[]>;
 
     constructor() {

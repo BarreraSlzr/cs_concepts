@@ -1,5 +1,5 @@
-import { TreeNode } from './tree';
-import { ListNode } from './list';
+import { TreeNode } from '../tree';
+import { ListNode } from '../list';
 
 function convertTreeToList<T>(root: TreeNode<T> | null): ListNode<T> | null {
     if (!root) {

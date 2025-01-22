@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function getMinimumDifference(root: TreeNode<number> | null): number {
     let minDiff = Infinity;

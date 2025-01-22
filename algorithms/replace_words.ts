@@ -1,4 +1,4 @@
-import { TrieNode } from './trie';
+import { TrieNode } from '../trie';
 
 function replaceWords(dictionary: string[], sentence: string): string {
     const trie = new TrieNode<string>();

@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function bstInorder<T>(root: TreeNode<T> | null): T[] {
     const result: T[] = [];

@@ -1,4 +1,4 @@
-import { Graph } from './graph';
+import { Graph } from '../graph';
 
 function bfs<T>(graph: Graph<T>, startVertex: T): T[] {
     const visited: Set<T> = new Set();

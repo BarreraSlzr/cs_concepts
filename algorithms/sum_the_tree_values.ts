@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function sumTreeValues(root: TreeNode<number> | null): number {
     if (root === null) {

@@ -1,4 +1,4 @@
-import { LinkedList, LinkedListNode } from './linked_list';
+import { LinkedList, LinkedListNode } from '../linked_list';
 
 function isPalindrome<T>(list: LinkedList<T>): boolean {
     if (!list.head) return true;

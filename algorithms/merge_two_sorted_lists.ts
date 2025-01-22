@@ -1,4 +1,4 @@
-import { LinkedList, LinkedListNode } from './linked_list';
+import { LinkedList, LinkedListNode } from '../linked_list';
 
 function mergeTwoSortedLists<T>(l1: LinkedListNode<T> | null, l2: LinkedListNode<T> | null): LinkedListNode<T> | null {
     const dummyHead = new LinkedListNode<T>(null as any);

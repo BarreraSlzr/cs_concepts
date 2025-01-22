@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function sameTree<T>(p: TreeNode<T> | null, q: TreeNode<T> | null): boolean {
     if (p === null && q === null) {

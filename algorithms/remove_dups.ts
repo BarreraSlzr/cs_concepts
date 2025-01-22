@@ -1,10 +1,10 @@
-import { LinkedList, LinkedListNode } from './linked_list';
+import { LinkedList, LinkedListNode } from '../linked_list';
 
 function removeDups<T>(list: LinkedList<T>): void {
     if (!list.head) return;
 
     const seen = new Set<T>();
-    let current = list.head;
+    let current: LinkedListNode<T> | null  = list.head;
     let prev: LinkedListNode<T> | null = null;
 
     while (current) {

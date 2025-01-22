@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function targetPath(root: TreeNode<number> | null, target: number): number[] | null {
     if (!root) return null;

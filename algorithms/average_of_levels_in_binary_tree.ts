@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function averageOfLevels(root: TreeNode<number> | null): number[] {
     if (!root) return [];

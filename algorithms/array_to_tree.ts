@@ -1,4 +1,4 @@
-import { TreeNode } from './tree';
+import { TreeNode } from '../tree';
 
 function arrayToTree(arr: number[]): TreeNode<number> | null {
     if (arr.length === 0) return null;
